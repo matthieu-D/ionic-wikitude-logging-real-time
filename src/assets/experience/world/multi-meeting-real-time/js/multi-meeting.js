@@ -57,7 +57,10 @@ var World = {
 			*/
 			World.requestDataFromLocal(lat, lon);
 			World.initiallyLoadedData = true;
-		}
+		} else {
+      AR.logger.debug(World.initiallyLoadedData);
+      World.updateMarkersDistance();
+    }
 	},
 
 	// fired when user pressed maker in cam
@@ -101,7 +104,13 @@ var World = {
       });
     }
     World.loadPoisFromJsData(poiData);
-	}
+	},
+
+  updateMarkersDistance: function updateMarkersDistanceFn () {
+    for (var i = 0, len = this.markerList.length; i < len; i++) {
+      this.markerList[i].updateDistance();
+    }
+  }
 };
 
 /*

@@ -114,6 +114,8 @@ class Marker {
       ]);
     }
 
+    marker.descriptionLabel.text = marker.markerLocation.distanceToUser();
+
     marker.markerDrawableIdle.enabled = false;
     marker.markerDrawableSelected.enabled = true;
     marker.animationGroupSelected.start();
@@ -164,5 +166,10 @@ class Marker {
         return false;
       }
     }
+  }
+
+  updateDistance() {
+    // this.descriptionLabel.text = this.markerLocation.distanceToUser();
+    this.descriptionLabel.text = this.markerObject.locations[0].distanceToUser() + " meters away";
   }
 }

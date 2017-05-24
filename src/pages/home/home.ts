@@ -8,7 +8,7 @@ import { Platform } from 'ionic-angular';
 export class HomePage {
   wikitudePlugin: any;
   requiredFeatures = [ "2d_tracking", "geo" ];
-  arExperienceUrl = "www/assets/experience/world/multi-meeting/index.html";
+  arExperienceUrl = "www/assets/experience/world/multi-meeting-animated/index.html";
   startupConfiguration = {
     "camera_position": "back"
   };

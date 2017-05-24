@@ -3,10 +3,11 @@
     <name>MyApp</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.1.200:8100"/>
+    <content original-src="index.html" src="http://192.168.1.200:8101"/>
     <access origin="*"/>
     <allow-navigation href="http://ionic.local/*"/>
     <allow-navigation href="http://192.168.1.200:8100"/>
+    <allow-navigation href="http://192.168.1.200:8101"/>
     <feature name="CDVWKWebViewEngine">
         <param name="ios-package" value="CDVWKWebViewEngine"/>
     </feature>
@@ -28,6 +29,7 @@
     <allow-intent href="mailto:*"/>
     <allow-intent href="geo:*"/>
     <platform name="android">
+        <preference name="loadUrlTimeoutValue" value="60000"/>
         <allow-intent href="market:*"/>
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png"/>
         <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png"/>
